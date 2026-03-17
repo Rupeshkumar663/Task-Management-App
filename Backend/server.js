@@ -9,7 +9,7 @@ dotenv.config();
 const app=express();
 connectDB();
 app.use(cors({
-  origin:"http://localhost:5173"||"task-management-app-five-weld.vercel.app",
+  origin:["http://localhost:5173","task-management-app-five-weld.vercel.app"],
   credentials: true
 }));
 app.use(express.json());
