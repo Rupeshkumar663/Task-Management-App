@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Meta, Navigate, Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
 // pages------------------------------------------------
 import SignUp from "./pages/SignUp";
@@ -9,7 +9,7 @@ import Forgetpassword from "./pages/ForgetPassword";
 import EditProfile from "./pages/EditProfile";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
-export const serverUrl = "http://localhost:7000";
+
 function App() {
   const { userData }=useSelector((state)=>state.user);
   return (

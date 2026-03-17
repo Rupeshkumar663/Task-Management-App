@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { serverUrl } from "../App";
+const serverUrl=import.meta.env.VITE_BACKEND_URL
 export default function Dashboard() {
   const [tasks, setTasks] = useState([]);
   const [title, setTitle] = useState("");
@@ -39,7 +39,7 @@ export default function Dashboard() {
     getTasks();
   };
   useEffect(() => {
-    getTasks();
+    getTasks;
   }, []);
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 flex items-center justify-center p-4">

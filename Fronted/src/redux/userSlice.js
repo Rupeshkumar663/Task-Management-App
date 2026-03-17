@@ -1,7 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 const storedUser = localStorage.getItem("user");
-
 const userSlice = createSlice({
   name: "user",
   initialState: {
@@ -18,6 +16,5 @@ const userSlice = createSlice({
     },
   },
 });
-
 export const { setUserData, logout } = userSlice.actions;
 export default userSlice.reducer;

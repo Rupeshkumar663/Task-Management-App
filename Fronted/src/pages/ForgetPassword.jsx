@@ -1,11 +1,9 @@
-
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { serverUrl } from "../App";
 import { toast } from "react-toastify";
 import { ClipLoader } from "react-spinners";
-
+const serverUrl=import.meta.env.VITE_BACKEND_URL
 function Forgetpassword(){
     const [step,setStep]=useState(1)
     const navigate=useNavigate()

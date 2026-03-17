@@ -4,13 +4,13 @@ import { IoEyeOutline } from "react-icons/io5";
 import { IoEye } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
-import { serverUrl } from '../App';
 import { toast } from 'react-toastify';
 import {ClipLoader} from 'react-spinners'
 import { useDispatch } from 'react-redux';
 import { setUserData } from '../redux/userSlice';
 import { signInWithPopup } from 'firebase/auth';
 import { auth, provider } from '../utils/firebase';
+const serverUrl=import.meta.env.VITE_BACKEND_URL
 function SignUp(){
     const [show,setShow]=useState(false)
     const  navigate=useNavigate()
@@ -22,6 +22,7 @@ function SignUp(){
     const handleSignup=async()=>{
       setLoading(true)
       try{
+        
          const result=await axios.post(serverUrl +"/api/auth/signup",{name,password,email,},{withCredentials:true})
          dispatch(setUserData(result.data))
          setLoading(false)

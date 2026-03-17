@@ -3,11 +3,11 @@ import { IoPersonCircle } from "react-icons/io5";
 import {useDispatch, useSelector} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
-import {serverUrl} from '../App';
 import { setUserData } from '../redux/userSlice';
 import { toast } from 'react-toastify';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GiSplitCross } from "react-icons/gi";
+const serverUrl=import.meta.env.VITE_BACKEND_URL
 function Nav() {
   const {userData}=useSelector(state=>state.user)
   const navigate=useNavigate()

@@ -3,7 +3,6 @@ import google from "../assets/google.jpg"
 import { IoEyeOutline, IoEye } from "react-icons/io5"
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { serverUrl } from '../App'
 import { toast } from 'react-toastify'
 import { ClipLoader } from 'react-spinners'
 import { useDispatch } from 'react-redux'
@@ -11,6 +10,7 @@ import { setUserData } from '../redux/userSlice'
 import { signInWithPopup } from 'firebase/auth'
 import { auth, provider } from '../utils/firebase'
 import { FaArrowLeftLong } from "react-icons/fa6";
+const serverUrl=import.meta.env.VITE_BACKEND_URL
 function Login() {
   const [show, setShow] = useState(false)
   const [email, setEmail] = useState("")

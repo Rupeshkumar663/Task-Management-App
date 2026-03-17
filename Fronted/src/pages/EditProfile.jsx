@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { serverUrl } from "../App";
 import axios from "axios";
 import { setUserData } from "../redux/userSlice";
 import { toast } from "react-toastify";
 import { ClipLoader } from "react-spinners";
-
+const serverUrl=import.meta.env.VITE_BACKEND_URL
 function EditProfile() {
   const navigate = useNavigate();
   const { userData } = useSelector(state => state.user);
