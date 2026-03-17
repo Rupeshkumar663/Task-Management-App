@@ -12,7 +12,7 @@ app.use(cors({
 
   origin:[
     "http://localhost:5173",
-    "task-management-app-five-weld.vercel.app"
+    "https://task-management-app-five-weld.vercel.app"
   ],
   credentials: true
 }));
